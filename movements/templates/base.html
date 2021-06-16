@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos - {% block title %}{% endblock %}</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        header {
+            color:white;
+            background-color: red;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        texto sin selector
+        <p>Boot Z6 Movimientos</p>
+    </header>
+
+    <section>
+        {% block content %}
+        
+        {% endblock %}
+    </section>
+
+    <footer>&copy; 2020 - 2021. Todos los derechos reservados.</footer>
+</body>
+</html>
