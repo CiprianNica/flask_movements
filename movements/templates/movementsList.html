@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
 
-{% block title %} Lista {% endblock %}
+{% block title %} gestion gastos {% endblock %}
 {%block content %}
-        <h1>Lista de movimientos</h1>
-        <p>Aqui va mi lista de movimientos</p>
+        <h1>Ingresos mensuales</h1>
+        <table>
+                <tr>
+                        <th>Fecha</th>
+                        <th>Concepto</th>
+                        <th>Importe</th>
+                </tr>
+                <tr>
+                        <td>12/11/2012</td>
+                        <td>alquiler garaje</td>
+                        <td>70€</td>
+                </tr>
+                <tr>
+                        <td>01/12/2021</td>
+                        <td>sueldo Dec</td>
+                        <td>2000€</td>
+                </tr>
+                <tr>
+                        <td colspan='3'>Total: 2070€</td>
+                        <br>
+                </tr>
+                
+        </table>
 {% endblock %}
