@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} gestion gastos {% endblock %}
+
+{% block content %}
+    <form action="creaalta" method="POST">
+
+        <div class="field">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha">
+        </div>
+        
+        <div class="field">
+            <label for="concepto">Concepto:</label>
+            <input type="text" name="concepto" value="di algo">
+        </div>
+        
+        <div class="field">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" step="0.01">
+        </div>
+        <div class="field">
+            <input type="submit" value="Aceptar">
+        </div>
+    </form>
+{% endblock %}
