@@ -12,15 +12,15 @@
                 </tr>
                 {% for registro in datos %}
                 <tr>
-                        <td>{{ registro[0] }}</td>
-                        <td>{{ registro[1] }}</td>
-                        <td>{{ registro[2] }} €</td>
+                        <td><a href="modifica/{{ registro['id'] }}">{{ registro['fecha'] }}</a></td>
+                        <td>{{ registro['concepto'] }}</td>
+                        <td>{{ registro['cantidad'] }} €</td>
                 </tr>
                 {% endfor %}
                 <tr>
                         <td colspan='3'>Total: {{ total }}€</td>
                         <br>
                 </tr>
-                
+                <h1>Si quieres borrar un registro <a href="delete">OK</a></h1>
         </table>
 {% endblock %}

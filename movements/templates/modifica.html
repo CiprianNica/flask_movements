@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Modifica {% endblock %}
+
+{% block content %}
+    <form action="/modifica/{{ registro['id'] }}" method="POST">
+
+        <div class="field">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" value="{{ registro['fecha'] }}">
+        </div>
+        
+        <div class="field">
+            <label for="concepto">Concepto:</label>
+            <input type="text" name="concepto" value="{{ registro['concepto'] }}">
+        </div>
+        
+        <div class="field">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" value="{{ registro['cantidad'] }}">
+        </div>
+        <div class="field">
+            <input type="submit" value="Modifica">
+        </div>
+    </form>
+{% endblock %}

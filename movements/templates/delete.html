@@ -1,0 +1,26 @@
+% extends 'base.html' %}
+
+{% block title %} DELETE {% endblock %}
+
+{% block content %}
+    <form action="/delete" method="POST">
+
+        <div class="field">
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" value="{{ registro[0]}}">
+        </div>
+        
+        <div class="field">
+            <label for="concepto">Concepto:</label>
+            <input type="text" name="concepto" value="{{ registro[1] }}">
+        </div>
+        
+        <div class="field">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" name="cantidad" value="{{ registro[2] }}">
+        </div>
+        <div class="field">
+            <input type="submit" value="Delete">
+        </div>
+    </form>
+{% endblock %}
