@@ -6,21 +6,21 @@
     <form action="creaalta" method="POST">
 
         <div class="field">
-            <label for="fecha">Fecha:</label>
-            <input type="date" name="fecha">
+            {{ form.fecha.label}}
+            {{ form.fecha }}
         </div>
         
         <div class="field">
-            <label for="concepto">Concepto:</label>
-            <input type="text" name="concepto" value="di algo">
+            {{ form.concepto.label}}
+            {{ form.concepto}}
         </div>
         
         <div class="field">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" name="cantidad" step="0.01">
+            {{ form.cantidad.label }}
+            {{ form.cantidad }}
         </div>
         <div class="field">
-            <input type="submit" value="Aceptar">
+            {{ form.submit }}
         </div>
     </form>
 {% endblock %}

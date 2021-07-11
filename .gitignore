@@ -5,3 +5,4 @@ movements/__pycache__/
 .vscode/
 movements/data/basededatos.db
 movements/data
+config.py

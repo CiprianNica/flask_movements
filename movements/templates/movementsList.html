@@ -4,23 +4,27 @@
 
 {%block content %}
         <h1>Ingresos mensuales <a href="creaalta">nuevo</a></h1>
-        <table>
-                <tr>
-                        <th>Fecha</th>
-                        <th>Concepto</th>
-                        <th>Importe</th>
-                </tr>
-                {% for registro in datos %}
-                <tr>
-                        <td><a href="modifica/{{ registro['id'] }}">{{ registro['fecha'] }}</a></td>
-                        <td>{{ registro['concepto'] }}</td>
-                        <td>{{ registro['cantidad'] }} €</td>
-                </tr>
-                {% endfor %}
-                <tr>
-                        <td colspan='3'>Total: {{ total }}€</td>
-                        <br>
-                </tr>
-                <h1>Si quieres borrar un registro <a href="delete">OK</a></h1>
-        </table>
-{% endblock %}
+        {% if datos|length > 0 %}
+                <table>
+                        <tr>
+                                <th>Fecha</th>
+                                <th>Concepto</th>
+                                <th>Importe</th>
+                        </tr>
+                        {% for registro in datos %}
+                        <tr>
+                                <td><a href="modifica/{{ registro['id'] }}">{{ registro['fecha'] }}</a></td>
+                                <td>{{ registro['concepto'] }}</td>
+                                <td>{{ registro['cantidad'] }} €</td>
+                        </tr>
+                        {% endfor %}
+                        <tr>
+                                <td colspan='3'>Total: {{ total }}€</td>
+                                <br>
+                        </tr>
+                        <h1>Si quieres borrar un registro <a href="delete">OK</a></h1>
+                </table>
+        {% else %}
+                <p>No hay movimientos</p>
+        {% endif %}
+        {% endblock %}
